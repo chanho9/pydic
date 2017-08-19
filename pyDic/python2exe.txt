@@ -1,0 +1,5 @@
+pip install pyinstaller
+
+pyinstaller --noconsole --onefile example.py
+
+(콘솔창 뜨지 말고 하나의 실행파일로 만들어라)
