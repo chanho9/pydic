@@ -20,14 +20,11 @@ class XDialog(QDialog, mypydicUI.Ui_Dialog):
 
     def __init__(self):
         QDialog.__init__(self)
-        # setupUi() 메서드는 화면에 다이얼로그 보여줌
         self.setupUi(self)
         
-        # 버튼 이벤트 핸들러
         self.btnFind.clicked.connect(self.findData)
         self.btnSelect.clicked.connect(self.selectData)
-
-     # 저장 버튼 클릭시 listOFtitle
+     
     def findData(self):
         key = self.keyWord.toPlainText()
         indexArr=[]
