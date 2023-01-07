@@ -203,6 +203,8 @@ class MyApp(QMainWindow):
 
     def findData(self):
 
+        self.dlg.terminal.setText("검색 중...")
+
         self.dlg.title.clear()
         self.dlg.browser_1.clear()
         self.dlg.browser_2.clear()
@@ -213,9 +215,17 @@ class MyApp(QMainWindow):
 
         for i, key in enumerate(keys):
             if i == 0:
-                ans = self.df['keyword'].str.contains(key)
+                if len(key) > 0 and key[0] == "!":
+                    key = key[1:]
+                    ans = (~self.df['keyword'].str.contains(key))
+                else:
+                    ans = self.df['keyword'].str.contains(key)
             else:
-                ans = ans & self.df['keyword'].str.contains(key)
+                if len(key) > 0 and key[0] == "!":
+                    key = key[1:]
+                    ans = ans & (~self.df['keyword'].str.contains(key))
+                else:
+                    ans = ans & self.df['keyword'].str.contains(key)
 
         # 카테고리 검색
         isCategory = False
@@ -239,6 +249,8 @@ class MyApp(QMainWindow):
         for index, title, in enumerate(_['title']):
             self.dlg.title.insertItem(index, str(_index[index])+" : "+title)
 
+        self.dlg.terminal.setText("검색 완료...")
+
         # default 선택값
         _item = self.dlg.title.item(0)
         self.dlg.title.setCurrentItem(_item)
@@ -251,7 +263,10 @@ class MyApp(QMainWindow):
         self.clipboard.setText(browser.toPlainText())
 
     def copyTitle(self):
-        self.clipboard.setText(self.title)
+        try:
+            self.clipboard.setText(self.title)
+        except:
+            pass
 
     def selectData(self):
 
