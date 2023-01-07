@@ -10,6 +10,8 @@ import webbrowser
 import pandas as pd
 import pickle
 
+import qdarktheme
+
 
 class Filter(QObject):
     def __init__(self, _Button):
@@ -293,5 +295,6 @@ class MyApp(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    qdarktheme.setup_theme()
     ex = MyApp()
     sys.exit(app.exec_())
