@@ -177,7 +177,7 @@ class MyApp(QMainWindow):
                 (self.df, self.header, self.dataList, self.categoryList, self.selectedCategory, self.selectedViewer) = pickle.load(f)
             self.dlg.terminal.setText("사전이 확인되었습니다.")
         except Exception as e:
-            self.dlg.terminal.setText(e,"사전을 업데이트 합니다.")
+            self.dlg.terminal.setText("사전을 업데이트 합니다.")
             self.dictionaryUpdate()
 
 
