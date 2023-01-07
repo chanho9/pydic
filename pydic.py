@@ -2,37 +2,13 @@
 #-*- coding: utf-8 -*-
 
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLineEdit
+from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.uic import loadUi
-from PyQt5.QtCore import pyqtSignal, QObject, QEvent, Qt
+from PyQt5.QtCore import QObject, QEvent
 import sys
-import os
-from openpyxl import load_workbook
 import webbrowser
 import pandas as pd
 import pickle
-
-
-# def clickable(widget):
-#     # https://developer-mistive.tistory.com/55
-#     class Filter(QObject):
-#
-#         clicked = pyqtSignal()	#pyside2 사용자는 pyqtSignal() -> Signal()로 변경
-#
-#         def eventFilter(self, obj, event):
-#
-#             if obj == widget:
-#                 if event.type() == QEvent.MouseButtonRelease:
-#                     if obj.rect().contains(event.pos()):
-#                         self.clicked.emit()
-#                         # The developer can opt for .emit(obj) to get the object within the slot.
-#                         return True
-#
-#             return False
-#
-#     filter = Filter(widget)
-#     widget.installEventFilter(filter)
-#     return filter.clicked
 
 
 class Filter(QObject):
