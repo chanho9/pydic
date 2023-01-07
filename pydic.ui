@@ -6,79 +6,217 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>402</width>
-    <height>646</height>
+    <width>744</width>
+    <height>683</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QTextEdit" name="keyWord">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>371</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnFind">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>50</y>
-     <width>181</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>FIND</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="code">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>410</y>
-     <width>371</width>
-     <height>221</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QListView" name="listOFtitle">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>90</y>
-     <width>371</width>
-     <height>141</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnSelect">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>50</y>
-     <width>181</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>SELECT</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="codeExp">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>240</y>
-     <width>371</width>
-     <height>161</height>
-    </rect>
-   </property>
-  </widget>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="3" column="0">
+    <widget class="QPushButton" name="label_1">
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QPushButton" name="label_3">
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="keyWord">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>1</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>280</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="EditButton">
+       <property name="maximumSize">
+        <size>
+         <width>5</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>2</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="10" column="0">
+    <widget class="QTextBrowser" name="browser_3"/>
+   </item>
+   <item row="3" column="2" rowspan="8">
+    <widget class="QLabel" name="ImageViewer">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+       <horstretch>2</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>image/0.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QComboBox" name="columnComboBox"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QTextBrowser" name="browser_1"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QListWidget" name="title"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QPushButton" name="label_2">
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="1">
+      <widget class="QCheckBox" name="categoryCheckBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="text">
+        <string>일괄선택</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QComboBox" name="categoryComboBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="9" column="0">
+    <widget class="QPushButton" name="label_4">
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="updateButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="text">
+      <string>Dictionary update</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QTextBrowser" name="browser_2"/>
+   </item>
+   <item row="11" column="0" colspan="3">
+    <widget class="QLabel" name="terminal">
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
